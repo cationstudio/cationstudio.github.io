@@ -12,3 +12,8 @@
 name = "Legal Notice"
 url = "/legal-notice"
 weight = 1
+
+[[footer]]
+name = "Legal Terms"
+url = "/legal/"
+weight = 2
