@@ -11,7 +11,7 @@ logo_height = "32px"
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
-logo_text = "cationstudio"
+logo_text = "cation.studio"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
@@ -27,7 +27,7 @@ google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
 # copyright
-copyright = "© [cationstudio](https://cation.studio) <script>document.write(new Date().getFullYear())</script>"
+copyright = "© [cation.studio](https://cation.studio) <script>document.write(new Date().getFullYear())</script>"
 
 # Preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
@@ -62,9 +62,9 @@ content = "You must replace the **baseURL** in **hugo.toml** file when deploying
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Atlassian", "Development"]
-description = "Application development for the Atlassian toolstack"
-author = "cationstudio"
+keywords = ["Atlassian", "YouTrack", "Development"]
+description = "Software Solutions for Modern Teams"
+author = "cation.studio"
 twitter = "cationstudio"
 image = "images/og-image.png"
 

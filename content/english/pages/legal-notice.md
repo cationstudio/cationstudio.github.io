@@ -9,7 +9,7 @@ draft: false
 ---
 
 Julian Bauer<br>
-cationstudio<br>
+cation.studio<br>
 Marienweg 21<br>
 94086 Bad Griesbach i. Rottal<br>
 GERMANY
