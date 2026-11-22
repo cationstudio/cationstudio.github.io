@@ -17,7 +17,7 @@ GERMANY
 ### Contact
 
 Phone: +49(0)1752169240<br>
-E-Mail: julian.bauer(at)cation.studio
+E-Mail: hello(at)cation.studio
 
 ### VAT ID
 VAT ID according to § 27a UStG:
