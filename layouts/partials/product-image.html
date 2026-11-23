@@ -1,0 +1,10 @@
+{{/* Renders a product screenshot, swapping to Dark when the site is in dark mode.
+  Params: Light (required), Dark (optional), Alt, Class, Loading */}}
+{{ $class := .Class | default "" }}
+{{ $loading := .Loading | default "lazy" }}
+{{ if .Dark }}
+  {{ partial "image" (dict "Src" .Light "Alt" .Alt "Loading" $loading "Class" (printf "%s dark:hidden" $class) "DisplayXL" "800x" "DisplayLG" "700x" "DisplayMD" "600x") }}
+  {{ partial "image" (dict "Src" .Dark "Alt" .Alt "Loading" $loading "Class" (printf "%s hidden dark:block" $class) "DisplayXL" "800x" "DisplayLG" "700x" "DisplayMD" "600x") }}
+{{ else }}
+  {{ partial "image" (dict "Src" .Light "Alt" .Alt "Loading" $loading "Class" $class "DisplayXL" "800x" "DisplayLG" "700x" "DisplayMD" "600x") }}
+{{ end }}

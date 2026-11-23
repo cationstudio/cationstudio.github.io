@@ -6,6 +6,11 @@
 # url = "/blog"
 # weight = 1
 
+[[main]]
+name = "YouTrack Apps"
+url = "/youtrack/apps/"
+weight = 2
+
 # footer menu
 
 [[footer]]

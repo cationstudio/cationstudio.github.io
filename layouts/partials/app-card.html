@@ -1,0 +1,17 @@
+{{/* Card linking to an app page. Context: the app page. */}}
+<a
+  href="{{ .RelPermalink }}"
+  class="bg-theme-light dark:bg-darkmode-theme-light block h-full overflow-hidden rounded-lg">
+  {{ if .Params.image }}
+    {{ partial "product-image" (dict "Light" .Params.image "Dark" .Params.image_dark "Alt" (printf "%s screenshot" .Title)) }}
+  {{ end }}
+  <div class="p-6">
+    {{ with .Params.platform }}
+      <p class="text-primary dark:text-darkmode-primary mb-2 text-sm font-semibold uppercase">
+        {{ . }} app
+      </p>
+    {{ end }}
+    <h3 class="h4 mb-3">{{ .Title }}</h3>
+    <p>{{ .Description }}</p>
+  </div>
+</a>

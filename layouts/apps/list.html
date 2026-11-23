@@ -1,0 +1,16 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        {{ range .RegularPages.ByWeight }}
+          <div class="md:col-6 lg:col-4 mb-8">
+            {{ partial "app-card" . }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,94 @@
+{{ define "main" }}
+  <!-- Hero -->
+  <section class="section pt-14">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-8 md:col-10 mb-10 text-center">
+          {{ with .Params.platform }}
+            <p class="text-primary dark:text-darkmode-primary mb-3 font-semibold uppercase">
+              {{ . }} app
+            </p>
+          {{ end }}
+          <h1 class="mb-4 text-h3 lg:text-h1">{{ .Title }}</h1>
+          <p class="mb-6 text-lg">{{ .Description | markdownify }}</p>
+          <ul class="mb-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+            {{ with .Params.price }}
+              <li><i class="fa fa-tag pr-1"></i> {{ . }}</li>
+            {{ end }}
+            {{ with .Params.compatibility }}
+              <li><i class="fa fa-circle-check pr-1"></i> {{ . }}</li>
+            {{ end }}
+          </ul>
+          {{ with .Params.marketplace_url }}
+            <a class="btn btn-primary" href="{{ . }}" target="_blank" rel="noopener">
+              Get it on JetBrains Marketplace
+              <i class="fa fa-arrow-right pl-2"></i>
+            </a>
+          {{ else }}
+            <span class="btn btn-outline-primary cursor-default">
+              Coming soon to JetBrains Marketplace
+            </span>
+          {{ end }}
+        </div>
+        {{ with .Params.image }}
+          <div class="col-12">
+            {{ partial "product-image" (dict "Light" . "Dark" $.Params.image_dark "Alt" (printf "%s screenshot" $.Title) "Loading" "eager" "Class" "mx-auto rounded-lg shadow-lg lg:!max-w-[800px]") }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  <!-- /Hero -->
+
+  <!-- Features -->
+  {{ range $i, $e := .Params.features }}
+    <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
+      <div class="container">
+        <div class="row items-center justify-between">
+          <div
+            class="{{ if not (modBool $i 2) }}
+              md:order-2
+            {{ end }} md:col-6 mb-6">
+            {{ partial "product-image" (dict "Light" .image "Dark" .image_dark "Alt" .title "Class" "rounded-lg shadow-lg") }}
+          </div>
+          <div
+            class="{{ if not (modBool $i 2) }}
+              md:order-1
+            {{ end }} md:col-6 lg:col-5">
+            <h2 class="mb-4">{{ .title | markdownify }}</h2>
+            <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
+            <ul>
+              {{ range .bulletpoints }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa fa-check absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Features -->
+
+  <!-- Details -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-8">
+          <div class="content">
+            {{ .Content }}
+          </div>
+          {{ with .Params.eula }}
+            <p class="mt-8 text-sm">
+              By using {{ $.Title }} you agree to the
+              <a class="underline" href="{{ . | relURL }}">End User License Agreement</a>.
+            </p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Details -->
+{{ end }}
