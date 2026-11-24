@@ -22,28 +22,29 @@ features:
   - title: "Right where you need it"
     content: "Open **QR Code** from the options menu (…) of any issue or knowledge base article."
     image: "/images/youtrack/apps/qr-code/03-menu-light.png"
-    image_dark: "/images/youtrack/apps/qr-code/03-menu-dark.png"
+    image_dark: "/images/youtrack/apps/qr-code/04-menu-dark.png"
     bulletpoints:
       - "Works for issues and knowledge base articles"
       - "Visible to everyone who can read the issue or article"
       - "No configuration needed"
+      - "Accessible with keyboard and screen readers"
 
   - title: "From screen to phone in a second"
     content: "Scan the code with your phone camera to open the item in the YouTrack mobile app or browser."
-    image: "/images/youtrack/apps/qr-code/01-issue-dialog-light.png"
-    image_dark: "/images/youtrack/apps/qr-code/02-issue-dialog-dark.png"
+    image: "/images/youtrack/apps/qr-code/05-article-dialog-light.png"
+    image_dark: "/images/youtrack/apps/qr-code/06-article-dialog-dark.png"
     bulletpoints:
       - "Copy the link with one click"
       - "Download the code as **SVG** or **PNG** with a print-ready quiet zone"
       - "Files are named after the ID, for example `PRJ-42-qr.png`"
-
-  - title: "Made for labels, whiteboards and handouts"
-    content: "Put QR codes on labels, whiteboards, hardware or printed handouts and link the physical world to your YouTrack."
-    image: "/images/youtrack/apps/qr-code/04-article-dialog-light.png"
-    bulletpoints:
       - "Works in light and dark theme"
-      - "Available in English and German"
-      - "Accessible with keyboard and screen readers"
+
+  - title: "Print a label straight from the dialog"
+    content: "Print a label with the QR code, ID, title and link. Stick it on shelves, equipment, hardware or folders, or use the code on whiteboards, slides and printed handouts."
+    image: "/images/youtrack/apps/qr-code/07-print-label.png"
+    bulletpoints:
+      - "QR code, ID, title and link on one label"
+      - "Dashed cutting guide for clean edges"
 ---
 
 ## Getting started
@@ -56,7 +57,7 @@ features:
 
 ## Privacy
 
-The QR code is generated in your browser. The app stores no data and sends nothing outside your YouTrack site.
+The QR code and the label are generated in your browser. The app stores no data and sends nothing outside your YouTrack site.
 
 ## Support
 
