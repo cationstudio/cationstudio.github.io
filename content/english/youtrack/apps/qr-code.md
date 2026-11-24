@@ -11,8 +11,7 @@ image_dark: "/images/youtrack/apps/qr-code/02-issue-dialog-dark.png"
 platform: "YouTrack"
 compatibility: "YouTrack 2025.1+ (Cloud and Server)"
 price: "Free"
-# leave empty until the app is approved on JetBrains Marketplace
-marketplace_url: ""
+marketplace_url: "https://plugins.jetbrains.com/plugin/36386-qr-code"
 eula: "/legal/jetbrains-plugins-eula/"
 weight: 1
 # save as draft
@@ -49,7 +48,7 @@ features:
 
 ## Getting started
 
-1. **Install the app:** in YouTrack, open **Administration > Apps > Add app > Browse JetBrains Marketplace** and install **QR Code**.
+1. **Install the app:** in YouTrack, open **Administration > Apps > Add app > Browse JetBrains Marketplace** and install **QR Code** ([view on JetBrains Marketplace](https://plugins.jetbrains.com/plugin/36386-qr-code)).
 2. **Enable it for your projects:** open the app, choose **Add to projects** and select the projects whose issues and articles should get the menu item.
 3. Open any issue or article, click the options menu (…) and select **QR Code**.
 
